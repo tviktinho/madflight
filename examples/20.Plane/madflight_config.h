@@ -30,12 +30,12 @@ If things do not work as expected, have a good look at the startup messages!
 ========================================================================================================================*/
 
 // define the board header to use, or comment out for none
-#define MF_BOARD "brd/default.h"
+#define MF_BOARD "brd/default_ESP32.h"
 
 const char madflight_config[] = R""(
 
 //--- IMU --- Inertial Measurement Unit  (use spi -OR- i2c bus)
-//imu_gizmo      NONE  // options: NONE, BMI270, ICM42688, ICM45686, MPU6000, MPU6050, MPU6500, MPU9150, MPU9250
+//imu_gizmo      MPU6050  // options: NONE, BMI270, ICM42688, ICM45686, MPU6000, MPU6050, MPU6500, MPU9150, MPU9250
 //imu_bus_type   SPI   // options: SPI, I2C (not all combinations of gizmo and bus_type are supported)
 //imu_align      CW0   // options: CW0, CW90, CW180, CW270, CW0FLIP, CW90FLIP, CW180FLIP, CW270FLIP
 //imu_spi_bus    -1    // spi
@@ -48,11 +48,11 @@ const char madflight_config[] = R""(
 
 
 //--- RCL --- Remote Controller Link  (use serial bus -OR- ppm pin)
-//rcl_gizmo      NONE  // options: NONE, MAVLINK, CRSF, SBUS, DSM, PPM
-//rcl_ser_bus   -1     // serial
-//pin_rcl_ppm   -1     // ppm
+//rcl_gizmo      PPM  // options: NONE, MAVLINK, CRSF, SBUS, DSM, PPM
+//rcl_ser_bus   -1      // serial
+//pin_rcl_ppm   35     // ppm
 //rcl_num_ch     8     // serial and ppm: number of channels
-//rcl_deadband   0     // serial and ppm: center stick deadband
+//rcl_deadband   1500  // serial and ppm: center stick deadband
 
 //--- BAR --- Barometer
 //bar_gizmo      NONE  // options: NONE, BMP280, BMP388, BMP390, BMP580, HP203B, MS5611
