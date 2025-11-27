@@ -88,7 +88,7 @@ pin_bat_i      -1
 pin_bat_v      -1
 pin_bbx_cs     -1
 pin_imu_cs     -1
-pin_imu_int    39
+pin_imu_int    -1
 pin_led        -1
 led_gizmo     NONE // options: NONE, HIGH_IS_ON, LOW_IS_ON, RGB
 pin_mmc_dat    -1
